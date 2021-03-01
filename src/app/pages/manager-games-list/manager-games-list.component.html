@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Vos jeux</h1>
+
+  <button class="btn btn-primary" routerLink="/manager-add-game">Ajouter un jeu</button>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Catégorie</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let game of games; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ game.name }}</td>
+        <td>{{ game.category }}</td>
+        <td>
+          <button *ngIf="game.isReserved" class="btn btn-primary" (click)="returnGame(game)">
+            Rendu
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteGame(game)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

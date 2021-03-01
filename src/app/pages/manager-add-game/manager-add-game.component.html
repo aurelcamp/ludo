@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Ajouter un jeu</h1>
+  <form #addGameForm="ngForm" (ngSubmit)="validate()">
+    <div class="form-group">
+      <label for="nameInput">Nom du jeu</label>
+      <input type="text" class="form-control" id="nameInput" name="name" [(ngModel)]="game.name">
+    </div>
+    <div class="form-group">
+      <label for="descriptionInput">Description du jeu</label>
+      <textarea class="form-control" id="descriptionInput" rows="3" name="description" [(ngModel)]="game.description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="categorySelect">Catégorie</label>
+      <select class="form-control" id="categorySelect" name="category" [(ngModel)]="game.category">
+        <option *ngFor="let category of categories">{{ category }}</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!addGameForm.valid">Valider</button>
+  </form>
+</div>
