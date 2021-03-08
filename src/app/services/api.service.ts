@@ -72,4 +72,12 @@ export class ApiService {
   getStats() {
     return this.http.get(`${environment.apiUrl}/open/get-stats`, { headers: this.getHeaders() }).toPromise();
   }
+
+  getFakeStats() {
+    return this.http.get(`${environment.apiUrl}/open/get-fake-stats`, { headers: this.getHeaders() }).toPromise();
+  }
+
+  getFakeGames(): Promise<Game[]> {
+    return this.http.get<Game[]>(`${environment.apiUrl}/open/get-fake-games`, { headers: this.getHeaders() }).toPromise();
+  }
 }

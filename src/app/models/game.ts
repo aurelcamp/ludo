@@ -4,4 +4,9 @@ export class Game {
   description: string;
   category: string;
   isReserved: boolean;
+  tags: string[];
+
+  constructor() {
+    this.tags = [];
+  }
 }

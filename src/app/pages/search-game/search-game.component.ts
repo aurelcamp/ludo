@@ -17,11 +17,12 @@ export class SearchGameComponent implements OnInit {
 
   async ngOnInit() {
     this.games = await this.apiService.getAllGames();
+    console.log(this.games);
   }
 
   async reserveGame(game: Game) {
-    const upadtedGame = await this.apiService.reserveGame(game.id);
-    this.games = this.games.map((g: Game) => g.id === game.id ? upadtedGame : g);
+    const updatedGame = await this.apiService.reserveGame(game.id);
+    this.games = this.games.map((g: Game) => g.id === game.id ? updatedGame : g);
   }
 
 }

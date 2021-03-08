@@ -1,0 +1,17 @@
+.chip {
+  // display: flex;
+  // align-items: center;
+  background-color: #eee;
+  padding: 4px 8px;
+  border-radius: 12px;
+  line-height: 24px;
+
+  button {
+    border: 0;
+    background-color:transparent;
+    // border-radius: 1000px;
+    // width: 24px;
+    // height: 24px;;
+    cursor: pointer;
+  }
+}

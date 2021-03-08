@@ -15,6 +15,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ManagerAddGameComponent } from './pages/manager-add-game/manager-add-game.component';
 import { ManagerGamesListComponent } from './pages/manager-games-list/manager-games-list.component';
 import { SearchGameComponent } from './pages/search-game/search-game.component';
+import { UserLoansComponent } from './pages/user-loans/user-loans.component';
+import { ChipComponent } from './components/chip/chip.component';
+import { GameComponent } from './components/game/game.component';
 
 
 @NgModule({
@@ -28,6 +31,9 @@ import { SearchGameComponent } from './pages/search-game/search-game.component';
     ManagerAddGameComponent,
     ManagerGamesListComponent,
     SearchGameComponent,
+    UserLoansComponent,
+    ChipComponent,
+    GameComponent,
   ],
   imports: [
     BrowserModule,

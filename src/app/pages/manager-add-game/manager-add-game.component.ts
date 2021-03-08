@@ -12,6 +12,9 @@ export class ManagerAddGameComponent implements OnInit {
 
   game: Game = new Game();
 
+  themes = ['reflexion', 'Entre amis', 'Solo'];
+  tags = ['reflexion', 'Entre amis', 'Solo'];
+
   categories = ['Puzzle', 'Jeu de plateau', 'Jeu de réflexion', 'Jeu de carte'];
 
   constructor(
@@ -21,6 +24,16 @@ export class ManagerAddGameComponent implements OnInit {
 
   ngOnInit(): void {
     this.game.category = this.categories[0];
+  }
+
+  onTagSelected(tag: string) {
+    if (!this.game.tags.includes(tag)) {
+      this.game.tags.push(tag);
+    }
+  }
+
+  removeTag(tag: string) {
+    this.game.tags = this.game.tags.filter((t: string) => t !== tag);
   }
 
   async validate() {

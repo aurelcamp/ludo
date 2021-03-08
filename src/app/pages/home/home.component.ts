@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Game } from 'src/app/models/game';
 import { ApiService } from 'src/app/services/api.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -10,6 +11,9 @@ import { UserService } from 'src/app/services/user.service';
 export class HomeComponent implements OnInit {
 
   stats: any;
+  games: Game[];
+
+  nbGames: number = 0;
 
   constructor(
     public userService: UserService,
@@ -17,7 +21,13 @@ export class HomeComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
-    this.stats = await this.apiService.getStats();
+    // this.stats = await this.apiService.getStats();
+    this.stats = await this.apiService.getFakeStats();
+
+    this.games = await this.apiService.getFakeGames();
+    
+
+    this.nbGames = this.stats.categories
     console.log(this.stats);
   }
 

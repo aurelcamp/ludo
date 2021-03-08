@@ -1,3 +1,63 @@
 <div *ngIf="userService.user">
   Bonjour {{ userService.user.firstName }}
 </div>
+
+<div class="container">
+  <h1>Ludoweb</h1>
+
+  <h2>Ludoweb en quelques chiffres</h2>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <div class="number-bloc">
+        <div clas="number">
+          {{ stats?.nbLoans }}
+        </div>
+        <div class="text">
+          prêts effectués
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <div class="number-bloc">
+        <div clas="number">
+          {{ stats?.nbManagers }}
+        </div>
+        <div class="text">
+          ludothèques inscrites
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <div class="number-bloc">
+        <div clas="number">
+          {{ stats?.nbUsers }}
+        </div>
+        <div class="text">
+          prêts effectués
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <div class="number-bloc">
+        <div clas="number">
+          {{ stats?.nbManagers }}
+        </div>
+        <div class="text">
+          ludothèques inscrites
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Les derniers jeux ajoutés</h2>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-4" *ngFor="let game of games">
+      <app-game [game]="game"></app-game>
+    </div>
+  </div>
+</div>

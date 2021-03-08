@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent, },
   { path: 'contact', component: ContactComponent, },
   { path: 'search-game', component: SearchGameComponent, },
+  { path: 'user-loans', component: SearchGameComponent, },
   { path: 'manager-add-game', component: ManagerAddGameComponent, },
   { path: 'manager-games-list', component: ManagerGamesListComponent, },
 ];

@@ -12,9 +12,22 @@
     <div class="form-group">
       <label for="categorySelect">Catégorie</label>
       <select class="form-control" id="categorySelect" name="category" [(ngModel)]="game.category">
-        <option *ngFor="let category of categories">{{ category }}</option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
       </select>
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="!addGameForm.valid">Valider</button>
+
+    <div class="form-group">
+      <label for="categorySelect">Ajouter un tag</label>
+      <select class="form-control" id="tagSelect" (change)="onTagSelected(tagSelected.value)" name="tagSelected" ngModel #tagSelected="ngModel">
+        <option *ngFor="let tag of tags" [value]="tag">{{ tag }}</option>
+      </select>
+    </div>
+
+    <div>
+      <span *ngFor="let tag of game.tags">
+        <app-chip [value]="tag" [canDelete]="true" (removeEvent)="removeTag($event)"></app-chip>
+      </span>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-top:20px;" [disabled]="!addGameForm.valid">Valider</button>
   </form>
 </div>

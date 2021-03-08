@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ game.name }}</h5>
+    <p class="card-text">{{ game.description }}</p>
+    <p>
+      <span *ngFor="let tag of game.tags">
+        <app-chip [value]="tag" [canDelete]="false"></app-chip>
+      </span>
+    </p>
+    <div>
+      <button *ngIf="!game.isReserved" class="btn btn-primary" (click)="reserveEvent.emit(game)">Réserver</button>
+      <div *ngIf="game.isReserved"><i>Réservé</i></div>
+    </div>
+  </div>
+</div>
