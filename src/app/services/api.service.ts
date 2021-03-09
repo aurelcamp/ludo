@@ -80,4 +80,8 @@ export class ApiService {
   getFakeGames(): Promise<Game[]> {
     return this.http.get<Game[]>(`${environment.apiUrl}/open/get-fake-games`, { headers: this.getHeaders() }).toPromise();
   }
+
+  geFakeTestimonies() {
+    return this.http.get<any[]>(`${environment.apiUrl}/open/get-fake-testimonies`, { headers: this.getHeaders() }).toPromise();
+  }
 }

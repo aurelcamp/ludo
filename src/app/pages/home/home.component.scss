@@ -1,14 +1,43 @@
-.number-bloc {
-  border: 1px solid black;
-  border-radius: 8px;
+.top {
+  text-align: center;
+}
+
+.top-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.stat-element {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .number {
+    flex: 0 0 auto;
+    font-size: 32px;
+    margin-right: 16px;
+  }
+}
+
+.blue {
+  color: blue;
+}
+.pink {
+  color: pink;
+}
+
+
+.testimony-bloc {
+  // border: 1px solid black;
+  // border-radius: 8px;
   padding: 12px;
   text-align: center;
 
-  .number {
-    font-size: 32px;
-  }
-
-  .text {
-
+  img {
+    width: 80px;
+    height: 80px;
   }
 }

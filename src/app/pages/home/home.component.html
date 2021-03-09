@@ -1,58 +1,84 @@
-<div *ngIf="userService.user">
+<!-- <div *ngIf="userService.user">
   Bonjour {{ userService.user.firstName }}
-</div>
+</div> -->
+<img src="./assets/images/games.jpg" class="top-image">
 
 <div class="container">
-  <h1>Ludoweb</h1>
+  <div class="top">
+    <h1>Ludoweb</h1>
+    <p>
+      Prétez et empruntez des jeux de société.
+    </p>
+
+    <div>
+      <div *ngIf="!showNewsletter">
+        <button type="button" class="btn btn-primary" (click)="showNewsletter = true">S'inscrire à la newsletter</button>
+      </div>
+      <div *ngIf="showNewsletter">
+        <input type="text" #newsLetterInput="ngModel" ngModel>
+        <button type="button" class="btn btn-primary" [disabled]="!newsLetterInput.value">S'inscrire à la newsletter</button>
+      </div>
+    </div>
+  </div>
 
   <h2>Ludoweb en quelques chiffres</h2>
 
+  <div class="stat-element">
+    <div class="number">{{ stats?.nbLoans }}</div>
+    <div class="text">prêts de jeux effectués</div>
+  </div>
+
+  <div class="stat-element">
+    <div class="number">{{ stats?.nbManagers }}</div>
+    <div class="text">ludothèques</div>
+  </div>
+
+  <div class="stat-element">
+    <div class="number">{{ stats?.nbUsers }}</div>
+    <div class="text">utilisateurs</div>
+  </div>
+
+  <div class="stat-element">
+    <div class="number">{{ stats?.nbGames }}</div>
+    <div class="text">jeux enregistrés</div>
+  </div>
+
+  <div class="stat-element">
+    <div class="number">{{ stats?.nbGames / stats?.nbUsers }}</div>
+    <div class="text">jeux par utilisateur en moyenne</div>
+  </div>
+
+  <br>
+  <div class="stat-element">
+    <div class="number">{{ stats?.categories.length }}</div>
+    <div class="text">catégories différentes :</div>
+  </div>
+  <div>
+    <span *ngFor="let category of stats?.categories; let last = last;">
+      {{ category }}<span *ngIf="!last">, </span>
+    </span>
+  </div>
+
+  <br>
+  <h2>Les témoignages</h2>
   <div class="row">
-    <div class="col-xs-12 col-md-6">
-      <div class="number-bloc">
-        <div clas="number">
-          {{ stats?.nbLoans }}
+    <div class="col-xs-12 col-md-4" *ngFor="let testimony of testimonies">
+      <div class="testimony-bloc">
+        <div>
+          <img [src]="testimony.avatarUrl" alt="testimony">
         </div>
-        <div class="text">
-          prêts effectués
+        <div [ngClass]="{'blue' : testimony.gender === 'man', 'pink' : testimony.gender === 'woman'}">
+          {{ testimony.firstName }}
         </div>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6">
-      <div class="number-bloc">
-        <div clas="number">
-          {{ stats?.nbManagers }}
-        </div>
-        <div class="text">
-          ludothèques inscrites
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6">
-      <div class="number-bloc">
-        <div clas="number">
-          {{ stats?.nbUsers }}
-        </div>
-        <div class="text">
-          prêts effectués
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6">
-      <div class="number-bloc">
-        <div clas="number">
-          {{ stats?.nbManagers }}
-        </div>
-        <div class="text">
-          ludothèques inscrites
+        <div>
+          {{ testimony.text }}
         </div>
       </div>
     </div>
   </div>
 
+
+  <br>
   <h2>Les derniers jeux ajoutés</h2>
 
   <div class="row">

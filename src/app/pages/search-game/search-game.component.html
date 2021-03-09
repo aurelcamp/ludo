@@ -1,8 +1,16 @@
 <div class="container">
   <h1>Voici la liste de tous les jeux</h1>
 
+  <div class="form-group">
+    <label for="selectCategory">Filtrer par catégorie</label>
+    <select class="form-control" id="selectCategory" (change)="onCategorySelected(categorySelected.value)" #categorySelected="ngModel" ngModel>
+      <option value="">Toutes les catégories</option>
+      <option [value]="category" *ngFor="let category of categories">{{ category }}</option>
+    </select>
+  </div>
+
   <div class="row">
-    <div class="col-xs-12 col-md-4" *ngFor="let game of games">
+    <div class="col-xs-12 col-md-4" *ngFor="let game of gamesDisplayed">
       <app-game [game]="game" (reserveEvent)="reserveGame($event)"></app-game>
     </div>
   </div>

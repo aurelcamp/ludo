@@ -12,8 +12,30 @@ export class HomeComponent implements OnInit {
 
   stats: any;
   games: Game[];
+  testimonies: any[];
 
   nbGames: number = 0;
+
+  showNewsletter = false;
+
+  data = [
+    {
+      "name": "Germany",
+      "value": 8940000
+    },
+    {
+      "name": "USA",
+      "value": 5000000
+    },
+    {
+      "name": "France",
+      "value": 7200000
+    },
+      {
+      "name": "UK",
+      "value": 6200000
+    }
+  ]
 
   constructor(
     public userService: UserService,
@@ -25,7 +47,10 @@ export class HomeComponent implements OnInit {
     this.stats = await this.apiService.getFakeStats();
 
     this.games = await this.apiService.getFakeGames();
-    
+
+    this.testimonies = await this.apiService.geFakeTestimonies();
+    console.log(this.testimonies);
+
 
     this.nbGames = this.stats.categories
     console.log(this.stats);

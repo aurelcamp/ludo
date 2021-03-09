@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './pages/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -41,6 +42,7 @@ import { GameComponent } from './components/game/game.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    NgxChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

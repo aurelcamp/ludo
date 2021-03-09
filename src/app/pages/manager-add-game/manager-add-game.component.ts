@@ -12,7 +12,6 @@ export class ManagerAddGameComponent implements OnInit {
 
   game: Game = new Game();
 
-  themes = ['reflexion', 'Entre amis', 'Solo'];
   tags = ['reflexion', 'Entre amis', 'Solo'];
 
   categories = ['Puzzle', 'Jeu de plateau', 'Jeu de réflexion', 'Jeu de carte'];
