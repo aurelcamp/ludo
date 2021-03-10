@@ -5,7 +5,6 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:8000/api',
-  // apiUrl: 'http://ludo-api.les-combien.com/api'
 };
 
 /*
