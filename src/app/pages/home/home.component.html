@@ -44,7 +44,7 @@
   </div>
 
   <div class="stat-element">
-    <div class="number">{{ stats?.nbGames / stats?.nbUsers ? stats?.nbUsers : 1 }}</div>
+    <div class="number">{{ stats?.nbGames / (stats?.nbUsers ? stats?.nbUsers : 1) }}</div>
     <div class="text">jeux par utilisateur en moyenne</div>
   </div>
 

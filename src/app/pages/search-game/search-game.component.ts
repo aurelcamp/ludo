@@ -9,7 +9,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class SearchGameComponent implements OnInit {
 
-  categories = ['Puzzle', 'Jeu de plateau', 'Jeu de réflexion', 'Jeu de carte'];
+  categories = ['Puzzle', 'Jeu de plateau', 'Jeu de dés', 'Jeu de cartes'];
 
   games: Game[];
   gamesDisplayed: Game[];
