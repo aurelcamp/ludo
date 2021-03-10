@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   nbGames: number = 0;
 
   showNewsletter = false;
+  newsletterEmail = '';
 
   data = [
     {
@@ -54,6 +55,10 @@ export class HomeComponent implements OnInit {
 
     this.nbGames = this.stats.categories
     console.log(this.stats);
+  }
+
+  inscriptionToNewsletter() {
+    console.log(this.newsletterEmail);
   }
 
 }

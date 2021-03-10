@@ -1,6 +1,7 @@
-<div class="card">
+<div class="card" [ngClass]="{'child': game.age === 'Enfant', 'family': game.age === 'Famille', 'adult': game.age === 'Adulte'}">
   <div class="card-body">
     <div class="category">{{ game.category }}</div>
+    <div class="category">public : {{ game.age }}</div>
     <h5 class="card-title">{{ game.name }}</h5>
     <p class="card-text">{{ game.description }}</p>
     <p>

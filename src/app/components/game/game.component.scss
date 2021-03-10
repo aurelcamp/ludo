@@ -5,3 +5,15 @@ app-chip {
 .category {
   font-style: italic;
 }
+
+.card {
+  &.child {
+    border-color: #00AEB9;
+  }
+  &.family {
+    border-color:#00B97E;
+  }
+  &.adult {
+    border-color:#B92A00;
+  }
+}

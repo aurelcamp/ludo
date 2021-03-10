@@ -15,6 +15,12 @@
         <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
       </select>
     </div>
+    <div class="form-group">
+      <label for="categorySelect">Age</label>
+      <select class="form-control" id="ageSelect" name="age" [(ngModel)]="game.age">
+        <option *ngFor="let age of ages" [value]="age">{{ age }}</option>
+      </select>
+    </div>
 
     <div class="form-group">
       <label for="categorySelect">Ajouter un tag</label>

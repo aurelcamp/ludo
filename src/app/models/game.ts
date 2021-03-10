@@ -4,6 +4,7 @@ export class Game {
   description: string;
   category: string;
   isReserved: boolean;
+  age: string;
   tags: string[];
 
   constructor() {

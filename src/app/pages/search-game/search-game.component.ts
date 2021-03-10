@@ -19,7 +19,8 @@ export class SearchGameComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
-    this.games = await this.apiService.getAllGames();
+    // this.games = await this.apiService.getAllGames();
+    this.games = await this.apiService.getFakeGames();
     this.gamesDisplayed = JSON.parse(JSON.stringify(this.games));
 
     console.log(this.games);

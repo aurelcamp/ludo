@@ -15,6 +15,7 @@ export class ManagerAddGameComponent implements OnInit {
   tags = ['reflexion', 'Entre amis', 'Solo'];
 
   categories = ['Puzzle', 'Jeu de plateau', 'Jeu de réflexion', 'Jeu de carte'];
+  ages = ['Enfants', 'Adulte', 'Famille'];
 
   constructor(
     private apiService: ApiService,

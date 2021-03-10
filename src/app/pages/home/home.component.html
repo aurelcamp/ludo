@@ -15,8 +15,8 @@
         <button type="button" class="btn btn-primary" (click)="showNewsletter = true">S'inscrire à la newsletter</button>
       </div>
       <div *ngIf="showNewsletter">
-        <input type="text" #newsLetterInput="ngModel" ngModel>
-        <button type="button" class="btn btn-primary" [disabled]="!newsLetterInput.value">S'inscrire à la newsletter</button>
+        <input type="email" #newsLetterInput="ngModel" [(ngModel)]="newsletterEmail" [email]="true">
+        <button type="button" class="btn btn-primary" [disabled]="!newsLetterInput.value" (click)="inscriptionToNewsletter()">Recevoir la newsletter</button>
       </div>
     </div>
   </div>
