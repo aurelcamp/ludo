@@ -12,11 +12,11 @@
 
     <div>
       <div *ngIf="!showNewsletter">
-        <button type="button" class="btn btn-primary" (click)="showNewsletter = true">S'inscrire à la newsletter</button>
+        <button type="button" class="btn btn-primary" (click)="showNewsletter = true">Je souhaite recevoir la newsletter</button>
       </div>
       <div *ngIf="showNewsletter">
-        <input type="email" #newsLetterInput="ngModel" [(ngModel)]="newsletterEmail" [email]="true">
-        <button type="button" class="btn btn-primary" [disabled]="!newsLetterInput.value" (click)="inscriptionToNewsletter()">Recevoir la newsletter</button>
+        <input type="email" #newsLetterInput="ngModel" [(ngModel)]="newsletterEmail" [email]="true" placehoder="a@a.com">
+        <button type="button" class="btn btn-primary" [disabled]="!newsLetterInput.value" (click)="inscriptionToNewsletter()">Inscription à la newsletter</button>
       </div>
     </div>
   </div>
@@ -44,7 +44,7 @@
   </div>
 
   <div class="stat-element">
-    <div class="number">{{ stats?.nbGames / stats?.nbUsers }}</div>
+    <div class="number">{{ stats?.nbGames / stats?.nbUsers ? stats?.nbUsers : 1 }}</div>
     <div class="text">jeux par utilisateur en moyenne</div>
   </div>
 
