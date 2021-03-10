@@ -1,17 +1,13 @@
 .chip {
-  // display: flex;
-  // align-items: center;
   background-color: #eee;
-  padding: 4px 8px;
-  border-radius: 12px;
-  line-height: 24px;
+  border: 2px solid #ccc;
+  padding: 4px 8px 6px 8px;
+  border-radius: 1000px;
+  font-weight: bold;
 
   button {
     border: 0;
-    background-color:transparent;
-    // border-radius: 1000px;
-    // width: 24px;
-    // height: 24px;;
+    border-radius: 1000px;
     cursor: pointer;
   }
 }

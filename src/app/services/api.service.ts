@@ -17,15 +17,14 @@ export class ApiService {
   getHeaders() {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
-      'x-domain': 'aurelcamp',
+      'x-domain': 'aurelcamp2',
     });
 
     const token = localStorage.getItem('userApiToken');
     if (token) {
-      // headers.set('x-auth-token', token);
       headers = new HttpHeaders({
         'Content-Type': 'application/json; charset=utf-8',
-        'x-domain': 'aurelcamp',
+        'x-domain': 'aurelcamp2',
         'x-auth-token': token,
       });
     }

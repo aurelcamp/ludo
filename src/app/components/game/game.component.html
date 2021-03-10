@@ -10,7 +10,7 @@
       </span>
     </p>
     <div>
-      <button *ngIf="!game.isReserved" class="btn btn-primary" (click)="reserveEvent.emit(game)">Réserver</button>
+      <button *ngIf="!game.isReserved && showReservationButton" class="btn btn-primary" (click)="reserve(game)">Réserver</button>
       <div *ngIf="game.isReserved"><i>Réservé</i></div>
     </div>
   </div>

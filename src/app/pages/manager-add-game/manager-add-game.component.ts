@@ -12,9 +12,9 @@ export class ManagerAddGameComponent implements OnInit {
 
   game: Game = new Game();
 
-  tags = ['reflexion', 'Entre amis', 'Solo'];
+  tags = ['Entre amis', 'Refléxion', 'Stratégie', 'Dessin', 'Solo', 'Gestion', 'Casse-tête', 'Adresse', 'Educatif', 'Argent', 'Original'];
 
-  categories = ['Puzzle', 'Jeu de plateau', 'Jeu de réflexion', 'Jeu de carte'];
+  categories = ['Puzzle', 'Jeu de plateau', 'Jeu de dés', 'Jeu de cartes'];
   ages = ['Enfants', 'Adulte', 'Famille'];
 
   constructor(

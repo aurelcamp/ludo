@@ -3,7 +3,7 @@
   <form #addGameForm="ngForm" (ngSubmit)="validate()">
     <div class="form-group">
       <label for="nameInput">Nom du jeu</label>
-      <input type="text" class="form-control" id="nameInput" name="name" [(ngModel)]="game.name">
+      <input type="text" class="form-control" id="nameInput" name="name" [(ngModel)]="game.name" [required]="true">
     </div>
     <div class="form-group">
       <label for="descriptionInput">Description du jeu</label>
@@ -11,13 +11,13 @@
     </div>
     <div class="form-group">
       <label for="categorySelect">Catégorie</label>
-      <select class="form-control" id="categorySelect" name="category" [(ngModel)]="game.category">
+      <select class="form-control" id="categorySelect" name="category" [(ngModel)]="game.category" [required]="true">
         <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
       </select>
     </div>
     <div class="form-group">
       <label for="categorySelect">Age</label>
-      <select class="form-control" id="ageSelect" name="age" [(ngModel)]="game.age">
+      <select class="form-control" id="ageSelect" name="age" [(ngModel)]="game.age" [required]="true">
         <option *ngFor="let age of ages" [value]="age">{{ age }}</option>
       </select>
     </div>

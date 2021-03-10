@@ -6,8 +6,8 @@
   <div class="collapse navbar-collapse">
     <div class="navbar-nav">
       <ng-container *ngIf="!user">
+        <a class="nav-item nav-link" routerLink="/search-game" routerLinkActive="active">Rechercher un jeu</a>
         <a class="nav-item nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
-        <a class="nav-item nav-link" routerLink="/search-game" routerLinkActive="active">Rechercher</a>
       </ng-container>
 
       <ng-container *ngIf="user">

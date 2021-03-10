@@ -44,17 +44,13 @@ export class HomeComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
-    // this.stats = await this.apiService.getStats();
-    this.stats = await this.apiService.getFakeStats();
+    this.stats = await this.apiService.getStats();
+    // this.stats = await this.apiService.getFakeStats();
 
-    this.games = await this.apiService.getFakeGames();
+    // this.games = await this.apiService.getFakeGames();
+    this.games = await this.apiService.getAllGames();
 
     this.testimonies = await this.apiService.geFakeTestimonies();
-    console.log(this.testimonies);
-
-
-    this.nbGames = this.stats.categories
-    console.log(this.stats);
   }
 
   inscriptionToNewsletter() {

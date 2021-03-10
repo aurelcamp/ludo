@@ -34,9 +34,4 @@ export class SearchGameComponent implements OnInit {
     }
   }
 
-  async reserveGame(game: Game) {
-    const updatedGame = await this.apiService.reserveGame(game.id);
-    this.games = this.games.map((g: Game) => g.id === game.id ? updatedGame : g);
-  }
-
 }
